@@ -1,0 +1,8 @@
+c:\users\ntpunsl-p35\documents\visual studio 2015\Projects\FormTest\bin\Debug\FormTest.exe.config
+c:\users\ntpunsl-p35\documents\visual studio 2015\Projects\FormTest\bin\Debug\FormTest.exe
+c:\users\ntpunsl-p35\documents\visual studio 2015\Projects\FormTest\bin\Debug\FormTest.pdb
+c:\users\ntpunsl-p35\documents\visual studio 2015\Projects\FormTest\obj\Debug\FormTest.Properties.Resources.resources
+c:\users\ntpunsl-p35\documents\visual studio 2015\Projects\FormTest\obj\Debug\FormTest.csproj.GenerateResource.Cache
+c:\users\ntpunsl-p35\documents\visual studio 2015\Projects\FormTest\obj\Debug\FormTest.exe
+c:\users\ntpunsl-p35\documents\visual studio 2015\Projects\FormTest\obj\Debug\FormTest.pdb
+c:\users\ntpunsl-p35\documents\visual studio 2015\Projects\FormTest\obj\Debug\FormTest.MainForm.resources
