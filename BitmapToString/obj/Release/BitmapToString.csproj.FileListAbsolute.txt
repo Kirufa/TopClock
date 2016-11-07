@@ -1,0 +1,7 @@
+F:\git\TopClock\BitmapToString\bin\Release\BitmapToString.exe
+F:\git\TopClock\BitmapToString\bin\Release\BitmapToString.pdb
+F:\git\TopClock\BitmapToString\obj\Release\BitmapToString.Form1.resources
+F:\git\TopClock\BitmapToString\obj\Release\BitmapToString.Properties.Resources.resources
+F:\git\TopClock\BitmapToString\obj\Release\BitmapToString.csproj.GenerateResource.Cache
+F:\git\TopClock\BitmapToString\obj\Release\BitmapToString.exe
+F:\git\TopClock\BitmapToString\obj\Release\BitmapToString.pdb

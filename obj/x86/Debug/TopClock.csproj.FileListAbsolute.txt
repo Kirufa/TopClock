@@ -1,0 +1,9 @@
+F:\git\TopClock\bin\x86\Debug\TopClock.exe.config
+F:\git\TopClock\bin\x86\Debug\TopClock.exe
+F:\git\TopClock\bin\x86\Debug\TopClock.pdb
+F:\git\TopClock\obj\x86\Debug\Clock.MainForm.resources
+F:\git\TopClock\obj\x86\Debug\Clock.Properties.Resources.resources
+F:\git\TopClock\obj\x86\Debug\TopClock.csproj.GenerateResource.Cache
+F:\git\TopClock\obj\x86\Debug\TopClock.exe
+F:\git\TopClock\obj\x86\Debug\TopClock.pdb
+F:\git\TopClock\obj\x86\Debug\TopClock.csprojResolveAssemblyReference.cache

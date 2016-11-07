@@ -2,6 +2,11 @@
 using System.Windows.Forms;
 using System.Timers;
 using System.Drawing;
+using System.Text;
+using System.Xml;
+using System.Xml.Serialization;
+using System.Drawing.Imaging;
+using System.IO;
 
 using Timer = System.Timers.Timer;
 
@@ -13,6 +18,10 @@ namespace Clock
         private const int interval = 10;
         private bool isDown;
         private Point point;
+        private Size labelSize;
+
+        private Color[] colors;
+        private Color backcolor;
 
         public MainForm()
         {
@@ -30,6 +39,15 @@ namespace Clock
 
             point = new Point();
 
+            labelSize = Size.Empty;
+
+            colors = new Color[3];
+
+            colors[0] = Color.FromArgb(176, 210, 237);
+            colors[1] = Color.FromArgb(83, 109, 127);
+            colors[2] = Color.FromArgb(46, 74, 97);
+
+            backcolor = Color.FromArgb(33, 42, 58);
         }
 
         private void Timer_Elapsed(object sender, ElapsedEventArgs e)
@@ -52,12 +70,26 @@ namespace Clock
 
         private void timeLbl_SizeChanged(object sender, EventArgs e)
         {
-            this.Size = timeLbl.Size;           
+            this.Size = timeLbl.Size;
+            pictureBoxBack.Size = timeLbl.Size;
+
+            if (pictureBoxBack.Image != null)
+                pictureBoxBack.Image.Dispose();
+            pictureBoxBack.Image = new Bitmap(pictureBoxBack.Width, pictureBoxBack.Height);                  
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            pictureBoxBack.Controls.Add(timeLbl);
+            timeLbl.Location = Point.Empty;
+            pictureBoxBack.Location = Point.Empty;
+
             timeLbl_SizeChanged(null, null);
+            timeLbl.BackColor = Color.Transparent;
+
+            pictureBoxBack.Image = new Bitmap(pictureBoxBack.Width, pictureBoxBack.Height);
+          
+            TransparencyKey = Color.White;
         }
 
         private void timeLbl_MouseMove(object sender, MouseEventArgs e)
@@ -93,5 +125,82 @@ namespace Clock
         {
             timer.Stop();
         }
+
+       
+
+        private void DrawBorder(Graphics g,Size border)
+        {
+            Bitmap back = TempClass.Bitmap;
+            
+            g.Clear(backcolor);
+
+           
+            for (int i = 0; i != colors.Length; ++i)
+            {
+                using (Pen pen = new Pen(colors[i], 1))
+                    g.DrawLines(pen, new Point[] {
+                        Point.Add(Point.Empty,new Size(i, i)),
+                        Point.Add(new Point(0, border.Height-1),new Size(i, -i)),
+                        Point.Add(new Point(border),new Size(-i-1, -i-1)),
+                        Point.Add(new Point(border.Width-1, 0),new Size(-i, i)),
+                        Point.Add( Point.Empty,new Size(i, i)) });
+            }
+
+            g.DrawImage(back, Point.Empty);
+            back.RotateFlip(RotateFlipType.Rotate90FlipNone);
+            g.DrawImage(back, new Point(border.Width - back.Width, 0));
+            back.RotateFlip(RotateFlipType.Rotate90FlipNone);
+            g.DrawImage(back, new Point(border.Width - back.Width, border.Height - back.Height));
+            back.RotateFlip(RotateFlipType.Rotate90FlipNone);
+            g.DrawImage(back, new Point(0, border.Height - back.Height));
+            back.RotateFlip(RotateFlipType.Rotate90FlipNone);
+
+        }
+
+        private void timeLbl_Paint(object sender, PaintEventArgs e)
+        {
+            using (Graphics g = Graphics.FromImage(pictureBoxBack.Image))
+                DrawBorder(g, e.ClipRectangle.Size);
+        }
+    }
+
+    public class TempClass
+    {
+        public byte[] BmpArray;
+
+        [XmlIgnore]
+        private static string bmpString =
+            "<?xml version=\"1.0\"?>" + Environment.NewLine +
+            "<TempClass xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">" + Environment.NewLine +
+            "<BmpArray>iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAIAAAAmzuBxAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwgAADsIBFShKgAAAAKZJREFUK" + 
+            "FNj+A8D3379vfL829F7n7Zefbfh0ls4gqp48v7H5gsva7pnh2VVesUXBGRWB+fWQxBIBVB68e4LHqFpfukVVr7x+i6ROk4Ruh7xel6JQMQANHzu9nOB" + 
+            "cXmKWlZYEQPQbqDhQN1oEnDEAHRacFoZ0HA0CThiALoc6DSg3WgScMQA9A/Q5UCnoUnAEUgF0EtAl6NJwBFUBdBXaBJwREiFlhUAtbGIhXZ2WMUAAAA" + 
+            "ASUVORK5CYII=</BmpArray>" + Environment.NewLine +
+            "</TempClass>";
+
+        [XmlIgnore]
+        public static Bitmap Bitmap
+        {
+            get
+            {
+                if (savedBmp == null)
+                {
+                    TempClass tmp;
+
+                    XmlSerializer xs = new XmlSerializer(typeof(TempClass));
+
+                    using (MemoryStream ms = new MemoryStream(Encoding.UTF8.GetBytes(TempClass.bmpString)))
+                        tmp = (TempClass)xs.Deserialize(ms);
+
+                    using (MemoryStream ms = new MemoryStream(tmp.BmpArray))
+                        savedBmp = new Bitmap(ms);
+                }
+
+                return savedBmp;
+            }
+
+        }
+
+        private static Bitmap savedBmp;    
     }
 }

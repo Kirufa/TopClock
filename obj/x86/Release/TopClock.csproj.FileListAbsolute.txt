@@ -7,3 +7,12 @@ C:\Users\NTPUNSL-P35\Documents\Visual Studio 2015\Projects\FormTest\obj\x86\Rele
 C:\Users\NTPUNSL-P35\Documents\Visual Studio 2015\Projects\FormTest\obj\x86\Release\TopClock.csproj.GenerateResource.Cache
 C:\Users\NTPUNSL-P35\Documents\Visual Studio 2015\Projects\FormTest\obj\x86\Release\TopClock.exe
 C:\Users\NTPUNSL-P35\Documents\Visual Studio 2015\Projects\FormTest\obj\x86\Release\TopClock.pdb
+F:\git\TopClock\bin\x86\Release\TopClock.exe.config
+F:\git\TopClock\obj\x86\Release\TopClock.exe
+F:\git\TopClock\obj\x86\Release\TopClock.pdb
+F:\git\TopClock\bin\x86\Release\TopClock.exe
+F:\git\TopClock\bin\x86\Release\TopClock.pdb
+F:\git\TopClock\obj\x86\Release\TopClock.csprojResolveAssemblyReference.cache
+F:\git\TopClock\obj\x86\Release\Clock.MainForm.resources
+F:\git\TopClock\obj\x86\Release\Clock.Properties.Resources.resources
+F:\git\TopClock\obj\x86\Release\TopClock.csproj.GenerateResource.Cache
