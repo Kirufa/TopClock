@@ -48,6 +48,8 @@ namespace Clock
             colors[2] = Color.FromArgb(46, 74, 97);
 
             backcolor = Color.FromArgb(33, 42, 58);
+
+            this.Opacity = 0.75;
         }
 
         private void Timer_Elapsed(object sender, ElapsedEventArgs e)
