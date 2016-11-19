@@ -5,3 +5,10 @@ F:\git\TopClock\BitmapToString\obj\Release\BitmapToString.Properties.Resources.r
 F:\git\TopClock\BitmapToString\obj\Release\BitmapToString.csproj.GenerateResource.Cache
 F:\git\TopClock\BitmapToString\obj\Release\BitmapToString.exe
 F:\git\TopClock\BitmapToString\obj\Release\BitmapToString.pdb
+F:\t\TopClock\BitmapToString\obj\Release\BitmapToString.exe
+F:\t\TopClock\BitmapToString\obj\Release\BitmapToString.pdb
+F:\t\TopClock\BitmapToString\bin\Release\BitmapToString.exe
+F:\t\TopClock\BitmapToString\bin\Release\BitmapToString.pdb
+F:\t\TopClock\BitmapToString\obj\Release\BitmapToString.Form1.resources
+F:\t\TopClock\BitmapToString\obj\Release\BitmapToString.Properties.Resources.resources
+F:\t\TopClock\BitmapToString\obj\Release\BitmapToString.csproj.GenerateResource.Cache

@@ -169,6 +169,24 @@ namespace Clock
             this.Close();
             Application.Exit();
         }
+
+        
+
+        private void toolStripTextBox_TextChanged(object sender, EventArgs e)
+        {
+            ToolStripTextBox textBox = sender as ToolStripTextBox;
+            float number;
+
+            if (float.TryParse(textBox.Text, out number) &&
+                number >= 0 &&
+                number <= 1)
+            {
+                if (number < 0.2)
+                    this.Opacity = 0.2;
+                else
+                    this.Opacity = number;
+            }
+        }
     }
 
     public class TempClass

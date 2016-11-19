@@ -32,6 +32,8 @@
             this.timeLbl = new System.Windows.Forms.Label();
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
             this.rightCMS = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.opacityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.moveToCenterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
@@ -68,10 +70,26 @@
             // rightCMS
             // 
             this.rightCMS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.opacityToolStripMenuItem,
             this.moveToCenterToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.rightCMS.Name = "rightCMS";
-            this.rightCMS.Size = new System.Drawing.Size(166, 70);
+            this.rightCMS.Size = new System.Drawing.Size(166, 92);
+            // 
+            // opacityToolStripMenuItem
+            // 
+            this.opacityToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripTextBox});
+            this.opacityToolStripMenuItem.Name = "opacityToolStripMenuItem";
+            this.opacityToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.opacityToolStripMenuItem.Text = "Opacity";
+            // 
+            // toolStripTextBox
+            // 
+            this.toolStripTextBox.Name = "toolStripTextBox";
+            this.toolStripTextBox.Size = new System.Drawing.Size(100, 23);
+            this.toolStripTextBox.Text = "0.75";
+            this.toolStripTextBox.TextChanged += new System.EventHandler(this.toolStripTextBox_TextChanged);
             // 
             // moveToCenterToolStripMenuItem
             // 
@@ -113,6 +131,8 @@
         private System.Windows.Forms.ContextMenuStrip rightCMS;
         private System.Windows.Forms.ToolStripMenuItem moveToCenterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem opacityToolStripMenuItem;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox;
     }
 }
 
