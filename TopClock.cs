@@ -62,9 +62,7 @@ namespace Clock
         {
             if (e.Button == MouseButtons.Right)
             {
-                timer.Stop();
-                this.Close();
-                Application.Exit();
+                rightCMS.Show((Control)sender, e.Location);
             }            
         }
 
@@ -116,12 +114,7 @@ namespace Clock
             point.X = Cursor.Position.X - this.Location.X;
             point.Y = Cursor.Position.Y - this.Location.Y;
 
-        }
-
-        private void timeLbl_DoubleClick(object sender, EventArgs e)
-        {
-            this.Location = new Point((Screen.FromControl(this).Bounds.Width - this.Width) / 2, this.Location.Y);
-        }
+        }       
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -163,6 +156,18 @@ namespace Clock
         {
             using (Graphics g = Graphics.FromImage(pictureBoxBack.Image))
                 DrawBorder(g, e.ClipRectangle.Size);
+        }
+
+        private void moveToCenterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Location = new Point((Screen.FromControl(this).Bounds.Width - this.Width) / 2, this.Location.Y);
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            timer.Stop();
+            this.Close();
+            Application.Exit();
         }
     }
 

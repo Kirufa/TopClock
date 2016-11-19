@@ -28,9 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.timeLbl = new System.Windows.Forms.Label();
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
+            this.rightCMS = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.moveToCenterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
+            this.rightCMS.SuspendLayout();
             this.SuspendLayout();
             // 
             // timeLbl
@@ -46,7 +51,6 @@
             this.timeLbl.Text = "06:30:21.5";
             this.timeLbl.SizeChanged += new System.EventHandler(this.timeLbl_SizeChanged);
             this.timeLbl.Paint += new System.Windows.Forms.PaintEventHandler(this.timeLbl_Paint);
-            this.timeLbl.DoubleClick += new System.EventHandler(this.timeLbl_DoubleClick);
             this.timeLbl.MouseClick += new System.Windows.Forms.MouseEventHandler(this.timeLbl_MouseClick);
             this.timeLbl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.timeLbl_MouseDown);
             this.timeLbl.MouseLeave += new System.EventHandler(this.timeLbl_MouseLeave);
@@ -61,6 +65,28 @@
             this.pictureBoxBack.TabIndex = 1;
             this.pictureBoxBack.TabStop = false;
             // 
+            // rightCMS
+            // 
+            this.rightCMS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.moveToCenterToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.rightCMS.Name = "rightCMS";
+            this.rightCMS.Size = new System.Drawing.Size(166, 70);
+            // 
+            // moveToCenterToolStripMenuItem
+            // 
+            this.moveToCenterToolStripMenuItem.Name = "moveToCenterToolStripMenuItem";
+            this.moveToCenterToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.moveToCenterToolStripMenuItem.Text = "Move To Center";
+            this.moveToCenterToolStripMenuItem.Click += new System.EventHandler(this.moveToCenterToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -74,6 +100,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
+            this.rightCMS.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -83,6 +110,9 @@
 
         private System.Windows.Forms.Label timeLbl;
         private System.Windows.Forms.PictureBox pictureBoxBack;
+        private System.Windows.Forms.ContextMenuStrip rightCMS;
+        private System.Windows.Forms.ToolStripMenuItem moveToCenterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
 

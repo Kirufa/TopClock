@@ -16,3 +16,12 @@ F:\git\TopClock\obj\x86\Release\TopClock.csprojResolveAssemblyReference.cache
 F:\git\TopClock\obj\x86\Release\Clock.MainForm.resources
 F:\git\TopClock\obj\x86\Release\Clock.Properties.Resources.resources
 F:\git\TopClock\obj\x86\Release\TopClock.csproj.GenerateResource.Cache
+F:\t\TopClock\bin\x86\Release\TopClock.exe.config
+F:\t\TopClock\obj\x86\Release\TopClock.exe
+F:\t\TopClock\obj\x86\Release\TopClock.pdb
+F:\t\TopClock\bin\x86\Release\TopClock.exe
+F:\t\TopClock\bin\x86\Release\TopClock.pdb
+F:\t\TopClock\obj\x86\Release\TopClock.csprojResolveAssemblyReference.cache
+F:\t\TopClock\obj\x86\Release\Clock.MainForm.resources
+F:\t\TopClock\obj\x86\Release\Clock.Properties.Resources.resources
+F:\t\TopClock\obj\x86\Release\TopClock.csproj.GenerateResource.Cache
