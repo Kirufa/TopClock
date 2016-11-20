@@ -73,9 +73,9 @@
             // 
             this.rightCMS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.opacityToolStripMenuItem,
+            this.topMostToolStripMenuItem,
             this.moveToCenterToolStripMenuItem,
-            this.exitToolStripMenuItem,
-            this.topMostToolStripMenuItem});
+            this.exitToolStripMenuItem});
             this.rightCMS.Name = "rightCMS";
             this.rightCMS.Size = new System.Drawing.Size(166, 114);
             // 
