@@ -36,6 +36,8 @@
             this.toolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.moveToCenterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.topMostToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripTextBox_TopMost = new System.Windows.Forms.ToolStripTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
             this.rightCMS.SuspendLayout();
             this.SuspendLayout();
@@ -72,9 +74,10 @@
             this.rightCMS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.opacityToolStripMenuItem,
             this.moveToCenterToolStripMenuItem,
-            this.exitToolStripMenuItem});
+            this.exitToolStripMenuItem,
+            this.topMostToolStripMenuItem});
             this.rightCMS.Name = "rightCMS";
-            this.rightCMS.Size = new System.Drawing.Size(166, 92);
+            this.rightCMS.Size = new System.Drawing.Size(166, 114);
             // 
             // opacityToolStripMenuItem
             // 
@@ -105,6 +108,21 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // topMostToolStripMenuItem
+            // 
+            this.topMostToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripTextBox_TopMost});
+            this.topMostToolStripMenuItem.Name = "topMostToolStripMenuItem";
+            this.topMostToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.topMostToolStripMenuItem.Text = "TopMost";
+            // 
+            // toolStripTextBox_TopMost
+            // 
+            this.toolStripTextBox_TopMost.Name = "toolStripTextBox_TopMost";
+            this.toolStripTextBox_TopMost.Size = new System.Drawing.Size(100, 23);
+            this.toolStripTextBox_TopMost.Text = "true";
+            this.toolStripTextBox_TopMost.TextChanged += new System.EventHandler(this.toolStripTextBox_TopMost_TextChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -133,6 +151,8 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem opacityToolStripMenuItem;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox;
+        private System.Windows.Forms.ToolStripMenuItem topMostToolStripMenuItem;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox_TopMost;
     }
 }
 

@@ -187,6 +187,17 @@ namespace Clock
                     this.Opacity = number;
             }
         }
+
+        private void toolStripTextBox_TopMost_TextChanged(object sender, EventArgs e)
+        {
+            ToolStripTextBox textBox = sender as ToolStripTextBox;
+            bool value;
+
+            if (bool.TryParse(textBox.Text, out value))
+            {
+                this.TopMost = value;
+            }
+        }
     }
 
     public class TempClass
