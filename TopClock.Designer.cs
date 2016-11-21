@@ -77,15 +77,15 @@
             this.moveToCenterToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.rightCMS.Name = "rightCMS";
-            this.rightCMS.Size = new System.Drawing.Size(166, 92);
+            this.rightCMS.Size = new System.Drawing.Size(191, 114);
             // 
             // opacityToolStripMenuItem
             // 
             this.opacityToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripTextBox});
             this.opacityToolStripMenuItem.Name = "opacityToolStripMenuItem";
-            this.opacityToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
-            this.opacityToolStripMenuItem.Text = "Opacity";
+            this.opacityToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.opacityToolStripMenuItem.Text = "Opacity (0~1)";
             // 
             // toolStripTextBox
             // 
@@ -99,8 +99,8 @@
             this.topMostToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripTextBox_TopMost});
             this.topMostToolStripMenuItem.Name = "topMostToolStripMenuItem";
-            this.topMostToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
-            this.topMostToolStripMenuItem.Text = "TopMost";
+            this.topMostToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.topMostToolStripMenuItem.Text = "TopMost (true/false)";
             // 
             // toolStripTextBox_TopMost
             // 
@@ -112,14 +112,14 @@
             // moveToCenterToolStripMenuItem
             // 
             this.moveToCenterToolStripMenuItem.Name = "moveToCenterToolStripMenuItem";
-            this.moveToCenterToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.moveToCenterToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.moveToCenterToolStripMenuItem.Text = "Move To Center";
             this.moveToCenterToolStripMenuItem.Click += new System.EventHandler(this.moveToCenterToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
