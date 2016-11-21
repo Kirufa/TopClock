@@ -12,3 +12,4 @@ F:\t\TopClock\BitmapToString\bin\Release\BitmapToString.pdb
 F:\t\TopClock\BitmapToString\obj\Release\BitmapToString.Form1.resources
 F:\t\TopClock\BitmapToString\obj\Release\BitmapToString.Properties.Resources.resources
 F:\t\TopClock\BitmapToString\obj\Release\BitmapToString.csproj.GenerateResource.Cache
+F:\t\TopClock\BitmapToString\obj\Release\BitmapToString.csprojResolveAssemblyReference.cache

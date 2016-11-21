@@ -34,10 +34,10 @@
             this.rightCMS = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.opacityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
-            this.moveToCenterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.topMostToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripTextBox_TopMost = new System.Windows.Forms.ToolStripTextBox();
+            this.moveToCenterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
             this.rightCMS.SuspendLayout();
             this.SuspendLayout();
@@ -77,7 +77,7 @@
             this.moveToCenterToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.rightCMS.Name = "rightCMS";
-            this.rightCMS.Size = new System.Drawing.Size(166, 114);
+            this.rightCMS.Size = new System.Drawing.Size(166, 92);
             // 
             // opacityToolStripMenuItem
             // 
@@ -94,20 +94,6 @@
             this.toolStripTextBox.Text = "0.75";
             this.toolStripTextBox.TextChanged += new System.EventHandler(this.toolStripTextBox_TextChanged);
             // 
-            // moveToCenterToolStripMenuItem
-            // 
-            this.moveToCenterToolStripMenuItem.Name = "moveToCenterToolStripMenuItem";
-            this.moveToCenterToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
-            this.moveToCenterToolStripMenuItem.Text = "Move To Center";
-            this.moveToCenterToolStripMenuItem.Click += new System.EventHandler(this.moveToCenterToolStripMenuItem_Click);
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
             // topMostToolStripMenuItem
             // 
             this.topMostToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -123,6 +109,20 @@
             this.toolStripTextBox_TopMost.Text = "true";
             this.toolStripTextBox_TopMost.TextChanged += new System.EventHandler(this.toolStripTextBox_TopMost_TextChanged);
             // 
+            // moveToCenterToolStripMenuItem
+            // 
+            this.moveToCenterToolStripMenuItem.Name = "moveToCenterToolStripMenuItem";
+            this.moveToCenterToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.moveToCenterToolStripMenuItem.Text = "Move To Center";
+            this.moveToCenterToolStripMenuItem.Click += new System.EventHandler(this.moveToCenterToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -133,6 +133,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
+            this.Text = "Loli Saiko";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();

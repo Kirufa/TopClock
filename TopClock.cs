@@ -3,9 +3,8 @@ using System.Windows.Forms;
 using System.Timers;
 using System.Drawing;
 using System.Text;
-using System.Xml;
+using System.Collections.Generic;
 using System.Xml.Serialization;
-using System.Drawing.Imaging;
 using System.IO;
 
 using Timer = System.Timers.Timer;
@@ -191,12 +190,16 @@ namespace Clock
         private void toolStripTextBox_TopMost_TextChanged(object sender, EventArgs e)
         {
             ToolStripTextBox textBox = sender as ToolStripTextBox;
-            bool value;
+            string text = textBox.Text.ToLower();
 
-            if (bool.TryParse(textBox.Text, out value))
-            {
-                this.TopMost = value;
-            }
+            List<string> trueList = new List<string>(new string[] { "true", "t" });
+            List<string> falseList = new List<string>(new string[] { "false", "f" });
+
+            if (trueList.Contains(text))
+                TopMost = true;
+
+            if (falseList.Contains(text))
+                TopMost = false;
         }
     }
 

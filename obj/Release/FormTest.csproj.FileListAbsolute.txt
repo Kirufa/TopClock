@@ -1,9 +1,0 @@
-c:\users\ntpunsl-p35\documents\visual studio 2015\Projects\FormTest\bin\Release\FormTest.exe.config
-c:\users\ntpunsl-p35\documents\visual studio 2015\Projects\FormTest\bin\Release\FormTest.exe
-c:\users\ntpunsl-p35\documents\visual studio 2015\Projects\FormTest\bin\Release\FormTest.pdb
-c:\users\ntpunsl-p35\documents\visual studio 2015\Projects\FormTest\obj\Release\FormTest.MainForm.resources
-c:\users\ntpunsl-p35\documents\visual studio 2015\Projects\FormTest\obj\Release\FormTest.Properties.Resources.resources
-c:\users\ntpunsl-p35\documents\visual studio 2015\Projects\FormTest\obj\Release\FormTest.csproj.GenerateResource.Cache
-c:\users\ntpunsl-p35\documents\visual studio 2015\Projects\FormTest\obj\Release\FormTest.exe
-c:\users\ntpunsl-p35\documents\visual studio 2015\Projects\FormTest\obj\Release\FormTest.pdb
-C:\Users\NTPUNSL-P35\Documents\Visual Studio 2015\Projects\FormTest\obj\Release\FormTest.csprojResolveAssemblyReference.cache
