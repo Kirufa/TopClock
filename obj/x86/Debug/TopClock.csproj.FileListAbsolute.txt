@@ -1,0 +1,8 @@
+F:\GITHUB\TopClock\bin\x86\Debug\TopClock.exe.config
+F:\GITHUB\TopClock\bin\x86\Debug\TopClock.exe
+F:\GITHUB\TopClock\bin\x86\Debug\TopClock.pdb
+F:\GITHUB\TopClock\obj\x86\Debug\Clock.MainForm.resources
+F:\GITHUB\TopClock\obj\x86\Debug\Clock.Properties.Resources.resources
+F:\GITHUB\TopClock\obj\x86\Debug\TopClock.csproj.GenerateResource.Cache
+F:\GITHUB\TopClock\obj\x86\Debug\TopClock.exe
+F:\GITHUB\TopClock\obj\x86\Debug\TopClock.pdb

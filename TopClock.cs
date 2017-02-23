@@ -6,6 +6,7 @@ using System.Text;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 using System.IO;
+using System.Xml;
 
 using Timer = System.Timers.Timer;
 
@@ -21,6 +22,8 @@ namespace Clock
 
         private Color[] colors;
         private Color backcolor;
+
+        private readonly string path;   
 
         public MainForm()
         {
@@ -49,9 +52,11 @@ namespace Clock
             backcolor = Color.FromArgb(33, 42, 58);
 
             this.Opacity = 0.75;
-        }
 
-        private void Timer_Elapsed(object sender, ElapsedEventArgs e)
+            path = Directory.GetCurrentDirectory() + @"\config.xml";    
+    }
+
+    private void Timer_Elapsed(object sender, ElapsedEventArgs e)
         {
             string timestamp = DateTime.Now.ToString("HH:mm:ss.f");
             timeLbl.Text = timestamp;           
@@ -89,6 +94,25 @@ namespace Clock
             pictureBoxBack.Image = new Bitmap(pictureBoxBack.Width, pictureBoxBack.Height);
           
             TransparencyKey = Color.White;
+
+            if (File.Exists(path))
+            {
+                using (FileStream fs = new FileStream(path, FileMode.Open))
+                {
+                    XmlSerializer xs = new XmlSerializer(typeof(Point));
+                    this.Location = (Point)xs.Deserialize(fs);
+                    fs.Close();
+                }
+            }
+            else
+            {
+                using (FileStream fs = new FileStream(path, FileMode.Create))
+                {
+                    XmlSerializer xs = new XmlSerializer(typeof(Point));
+                    xs.Serialize(fs, Point.Empty);
+                    fs.Close();
+                }
+            }
         }
 
         private void timeLbl_MouseMove(object sender, MouseEventArgs e)
@@ -118,9 +142,16 @@ namespace Clock
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             timer.Stop();
+
+            using (FileStream fs = new FileStream(path, FileMode.Create))
+            {
+                XmlSerializer xs = new XmlSerializer(typeof(Point));
+                xs.Serialize(fs, this.Location);
+                fs.Close();
+            }
         }
 
-       
+
 
         private void DrawBorder(Graphics g,Size border)
         {
