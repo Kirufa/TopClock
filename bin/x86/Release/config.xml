@@ -1,5 +1,47 @@
 <?xml version="1.0"?>
-<Point xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <X>328</X>
-  <Y>284</Y>
-</Point>
+<ArrayOfPoint xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Point>
+    <X>448</X>
+    <Y>642</Y>
+  </Point>
+  <Point>
+    <X>0</X>
+    <Y>0</Y>
+  </Point>
+  <Point>
+    <X>448</X>
+    <Y>642</Y>
+  </Point>
+  <Point>
+    <X>0</X>
+    <Y>0</Y>
+  </Point>
+  <Point>
+    <X>0</X>
+    <Y>0</Y>
+  </Point>
+  <Point>
+    <X>0</X>
+    <Y>0</Y>
+  </Point>
+  <Point>
+    <X>0</X>
+    <Y>0</Y>
+  </Point>
+  <Point>
+    <X>0</X>
+    <Y>0</Y>
+  </Point>
+  <Point>
+    <X>0</X>
+    <Y>0</Y>
+  </Point>
+  <Point>
+    <X>0</X>
+    <Y>0</Y>
+  </Point>
+  <Point>
+    <X>0</X>
+    <Y>0</Y>
+  </Point>
+</ArrayOfPoint>

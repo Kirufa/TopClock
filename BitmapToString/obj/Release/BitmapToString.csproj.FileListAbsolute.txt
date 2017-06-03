@@ -13,11 +13,3 @@ F:\t\TopClock\BitmapToString\obj\Release\BitmapToString.Form1.resources
 F:\t\TopClock\BitmapToString\obj\Release\BitmapToString.Properties.Resources.resources
 F:\t\TopClock\BitmapToString\obj\Release\BitmapToString.csproj.GenerateResource.Cache
 F:\t\TopClock\BitmapToString\obj\Release\BitmapToString.csprojResolveAssemblyReference.cache
-F:\GITHUB\TopClock\BitmapToString\bin\Release\BitmapToString.exe
-F:\GITHUB\TopClock\BitmapToString\bin\Release\BitmapToString.pdb
-F:\GITHUB\TopClock\BitmapToString\obj\Release\BitmapToString.csprojResolveAssemblyReference.cache
-F:\GITHUB\TopClock\BitmapToString\obj\Release\BitmapToString.Form1.resources
-F:\GITHUB\TopClock\BitmapToString\obj\Release\BitmapToString.Properties.Resources.resources
-F:\GITHUB\TopClock\BitmapToString\obj\Release\BitmapToString.csproj.GenerateResource.Cache
-F:\GITHUB\TopClock\BitmapToString\obj\Release\BitmapToString.exe
-F:\GITHUB\TopClock\BitmapToString\obj\Release\BitmapToString.pdb

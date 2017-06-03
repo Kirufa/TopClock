@@ -34,9 +34,6 @@
             this.rightCMS = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.opacityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
-            this.topMostToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripTextBox_TopMost = new System.Windows.Forms.ToolStripTextBox();
-            this.moveToCenterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
             this.rightCMS.SuspendLayout();
@@ -45,12 +42,12 @@
             // timeLbl
             // 
             this.timeLbl.AutoSize = true;
-            this.timeLbl.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeLbl.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.timeLbl.Location = new System.Drawing.Point(0, 0);
             this.timeLbl.Margin = new System.Windows.Forms.Padding(2);
             this.timeLbl.Name = "timeLbl";
-            this.timeLbl.Size = new System.Drawing.Size(141, 33);
+            this.timeLbl.Size = new System.Drawing.Size(143, 31);
             this.timeLbl.TabIndex = 0;
             this.timeLbl.Text = "06:30:21.5";
             this.timeLbl.SizeChanged += new System.EventHandler(this.timeLbl_SizeChanged);
@@ -73,18 +70,16 @@
             // 
             this.rightCMS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.opacityToolStripMenuItem,
-            this.topMostToolStripMenuItem,
-            this.moveToCenterToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.rightCMS.Name = "rightCMS";
-            this.rightCMS.Size = new System.Drawing.Size(191, 114);
+            this.rightCMS.Size = new System.Drawing.Size(153, 70);
             // 
             // opacityToolStripMenuItem
             // 
             this.opacityToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripTextBox});
             this.opacityToolStripMenuItem.Name = "opacityToolStripMenuItem";
-            this.opacityToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.opacityToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.opacityToolStripMenuItem.Text = "Opacity (0~1)";
             // 
             // toolStripTextBox
@@ -94,32 +89,10 @@
             this.toolStripTextBox.Text = "0.75";
             this.toolStripTextBox.TextChanged += new System.EventHandler(this.toolStripTextBox_TextChanged);
             // 
-            // topMostToolStripMenuItem
-            // 
-            this.topMostToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripTextBox_TopMost});
-            this.topMostToolStripMenuItem.Name = "topMostToolStripMenuItem";
-            this.topMostToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.topMostToolStripMenuItem.Text = "TopMost (true/false)";
-            // 
-            // toolStripTextBox_TopMost
-            // 
-            this.toolStripTextBox_TopMost.Name = "toolStripTextBox_TopMost";
-            this.toolStripTextBox_TopMost.Size = new System.Drawing.Size(100, 23);
-            this.toolStripTextBox_TopMost.Text = "true";
-            this.toolStripTextBox_TopMost.TextChanged += new System.EventHandler(this.toolStripTextBox_TopMost_TextChanged);
-            // 
-            // moveToCenterToolStripMenuItem
-            // 
-            this.moveToCenterToolStripMenuItem.Name = "moveToCenterToolStripMenuItem";
-            this.moveToCenterToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.moveToCenterToolStripMenuItem.Text = "Move To Center";
-            this.moveToCenterToolStripMenuItem.Click += new System.EventHandler(this.moveToCenterToolStripMenuItem_Click);
-            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -148,12 +121,9 @@
         private System.Windows.Forms.Label timeLbl;
         private System.Windows.Forms.PictureBox pictureBoxBack;
         private System.Windows.Forms.ContextMenuStrip rightCMS;
-        private System.Windows.Forms.ToolStripMenuItem moveToCenterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem opacityToolStripMenuItem;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox;
-        private System.Windows.Forms.ToolStripMenuItem topMostToolStripMenuItem;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox_TopMost;
     }
 }
 

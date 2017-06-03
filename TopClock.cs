@@ -17,13 +17,48 @@ namespace Clock
         private Timer timer;
         private const int interval = 10;
         private bool isDown;
+        private Point[] points;
         private Point point;
+
         private Size labelSize;
 
         private Color[] colors;
         private Color backcolor;
 
-        private readonly string path;   
+        private const int pointNum = 10;
+
+        private readonly string path;
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == (Keys.Control | Keys.Shift | Keys.C))
+            {
+                this.Location = new Point((Screen.FromControl(this).Bounds.Width - this.Width) / 2, this.Location.Y);
+            }
+            else if (keyData == (Keys.Control | Keys.Shift | Keys.A))
+            {
+                TopMost = !TopMost;
+            }
+            else
+            {
+                for (int i = 0; i != pointNum; ++i)
+                {
+                    if (keyData == (Keys.Control | Keys.Shift | (Keys)(i + '0')))
+                    {
+                        this.Location = points[i];
+                        break;
+                    }
+                    else if(keyData == (Keys.Control | (Keys)(i + '0')))
+                    {
+                        points[i] = this.Location;
+                    }
+
+                }
+            }
+
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
 
         public MainForm()
         {
@@ -39,7 +74,8 @@ namespace Clock
             this.TopMost = true;
             isDown = false;
 
-            point = new Point();
+            points = new Point[pointNum];
+            point = Point.Empty;
 
             labelSize = Size.Empty;
 
@@ -54,9 +90,9 @@ namespace Clock
             this.Opacity = 0.75;
 
             path = Directory.GetCurrentDirectory() + @"\config.xml";    
-    }
+        }
 
-    private void Timer_Elapsed(object sender, ElapsedEventArgs e)
+        private void Timer_Elapsed(object sender, ElapsedEventArgs e)
         {
             string timestamp = DateTime.Now.ToString("HH:mm:ss.f");
             timeLbl.Text = timestamp;           
@@ -99,8 +135,14 @@ namespace Clock
             {
                 using (FileStream fs = new FileStream(path, FileMode.Open))
                 {
-                    XmlSerializer xs = new XmlSerializer(typeof(Point));
-                    this.Location = (Point)xs.Deserialize(fs);
+                    XmlSerializer xs = new XmlSerializer(typeof(Point[]));
+
+                    Point[] temp = (Point[])xs.Deserialize(fs);
+
+                    this.Location = temp[0];
+
+                    Array.Copy(temp, 1, points, 0, pointNum);
+
                     fs.Close();
                 }
             }
@@ -108,8 +150,14 @@ namespace Clock
             {
                 using (FileStream fs = new FileStream(path, FileMode.Create))
                 {
-                    XmlSerializer xs = new XmlSerializer(typeof(Point));
-                    xs.Serialize(fs, Point.Empty);
+                    XmlSerializer xs = new XmlSerializer(typeof(Point[]));
+
+                    List<Point> list = new List<Point>();
+
+                    for (int i = 0; i != pointNum + 1; ++i)
+                        list.Add(Point.Empty);
+
+                    xs.Serialize(fs, list.ToArray());
                     fs.Close();
                 }
             }
@@ -145,8 +193,14 @@ namespace Clock
 
             using (FileStream fs = new FileStream(path, FileMode.Create))
             {
-                XmlSerializer xs = new XmlSerializer(typeof(Point));
-                xs.Serialize(fs, this.Location);
+                XmlSerializer xs = new XmlSerializer(typeof(Point[]));
+
+                List<Point> list = new List<Point>();
+
+                list.Add(this.Location);
+                list.AddRange(points);
+
+                xs.Serialize(fs, list.ToArray());
                 fs.Close();
             }
         }
@@ -190,7 +244,7 @@ namespace Clock
 
         private void moveToCenterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Location = new Point((Screen.FromControl(this).Bounds.Width - this.Width) / 2, this.Location.Y);
+          
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -216,22 +270,7 @@ namespace Clock
                 else
                     this.Opacity = number;
             }
-        }
-
-        private void toolStripTextBox_TopMost_TextChanged(object sender, EventArgs e)
-        {
-            ToolStripTextBox textBox = sender as ToolStripTextBox;
-            string text = textBox.Text.ToLower();
-
-            List<string> trueList = new List<string>(new string[] { "true", "t" });
-            List<string> falseList = new List<string>(new string[] { "false", "f" });
-
-            if (trueList.Contains(text))
-                TopMost = true;
-
-            if (falseList.Contains(text))
-                TopMost = false;
-        }
+        }      
     }
 
     public class TempClass

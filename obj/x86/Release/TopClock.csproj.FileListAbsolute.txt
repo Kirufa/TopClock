@@ -8,10 +8,10 @@ F:\t\TopClock\obj\x86\Release\TopClock.exe
 F:\t\TopClock\obj\x86\Release\TopClock.pdb
 F:\t\TopClock\obj\x86\Release\TopClock.csprojResolveAssemblyReference.cache
 F:\GITHUB\TopClock\bin\x86\Release\TopClock.exe.config
-F:\GITHUB\TopClock\obj\x86\Release\TopClock.exe
-F:\GITHUB\TopClock\obj\x86\Release\TopClock.pdb
 F:\GITHUB\TopClock\bin\x86\Release\TopClock.exe
 F:\GITHUB\TopClock\bin\x86\Release\TopClock.pdb
 F:\GITHUB\TopClock\obj\x86\Release\Clock.MainForm.resources
 F:\GITHUB\TopClock\obj\x86\Release\Clock.Properties.Resources.resources
 F:\GITHUB\TopClock\obj\x86\Release\TopClock.csproj.GenerateResource.Cache
+F:\GITHUB\TopClock\obj\x86\Release\TopClock.exe
+F:\GITHUB\TopClock\obj\x86\Release\TopClock.pdb
